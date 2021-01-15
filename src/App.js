@@ -21,12 +21,14 @@ export default class App extends Component {
           <ul>
             <li><Link to='/'>HomePage</Link></li>
           </ul>
-
+          <ul>
+            <li><Link to='/city/:cityname'>Search By City Name</Link></li>
+          </ul>
           <hr />
 
           <Switch>
             <Route exact path='/' component={HomePage} />
-            <Route path='/zip/:zipcode' component={CityInfo} />
+            <Route path='/city/:cityname' component={CityInfo} />
           </Switch>
         </div>
       </Router>
