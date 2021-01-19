@@ -17,6 +17,7 @@ class CityInfo extends Component {
 
 
     async componentDidMount(event) {
+        console.log(await axios.get(`https://ctp-zip-api.herokuapp.com/city/BROOKLYN`))
         try {    
             let cityname = event.target.value.toUpperCase();
             let hits = await axios.get(`https://ctp-zip-api.herokuapp.com/city/${cityname}`);
